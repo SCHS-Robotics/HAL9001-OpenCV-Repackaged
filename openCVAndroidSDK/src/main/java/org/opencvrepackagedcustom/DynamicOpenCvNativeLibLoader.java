@@ -129,7 +129,7 @@ public class DynamicOpenCvNativeLibLoader
     {
         libInProtectedStorage = new File(rcActivity.getFilesDir() + "/extra/libOpenCvNativeExtended.so");
         protectedExtraFolder = new File(rcActivity.getFilesDir() + "/extra/");
-        libOnSdcard = new File(Environment.getExternalStorageDirectory() + "/FIRST/libOpenCvNative.so");
+        libOnSdcard = new File(Environment.getExternalStorageDirectory() + "/FIRST/libOpenCvNativeExtended.so");
 
         /*
          * First, check to see if it exists in the protected storage
@@ -198,10 +198,10 @@ public class DynamicOpenCvNativeLibLoader
             @Override
             public void run()
             {
-                String msg = "libOpenCvNative.so was not found. Please copy it to the FIRST folder on the internal storage.";
+                String msg = "libOpenCvNativeExtended.so was not found. Please copy it to the FIRST folder on the internal storage.";
 
                 AlertDialog dialog = new AlertDialog.Builder(rcActivity)
-                        .setTitle("libOpenCvNative.so not found!")
+                        .setTitle("libOpenCvNativeExtended.so not found!")
                         .setMessage(msg)
                         .setCancelable(false)
                         .setPositiveButton("OK", new DialogInterface.OnClickListener()
@@ -225,8 +225,8 @@ public class DynamicOpenCvNativeLibLoader
             public void run()
             {
                 AlertDialog.Builder builder = new AlertDialog.Builder(rcActivity);
-                builder.setTitle("libOpenCvNative.so corrupted!");
-                builder.setMessage("libOpenCvNative.so is present in the FIRST on the internal storage. However, the MD5 " +
+                builder.setTitle("libOpenCvNativeExtended.so corrupted!");
+                builder.setMessage("libOpenCvNativeExtended.so is present in the FIRST on the internal storage. However, the MD5 " +
                         "checksum does not match what is expected. Delete and re-download the file.");
                 builder.setCancelable(false);
                 builder.setPositiveButton("OK", new DialogInterface.OnClickListener()
