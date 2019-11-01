@@ -127,7 +127,7 @@ public class DynamicOpenCvNativeLibLoader
 
     private void setupOpenCvFiles() throws OpenCvNativeLibNotFoundException, OpenCvNativeLibCorruptedException
     {
-        libInProtectedStorage = new File(rcActivity.getFilesDir() + "/extra/libOpenCvNative.so");
+        libInProtectedStorage = new File(rcActivity.getFilesDir() + "/extra/libOpenCvNativeExtended.so");
         protectedExtraFolder = new File(rcActivity.getFilesDir() + "/extra/");
         libOnSdcard = new File(Environment.getExternalStorageDirectory() + "/FIRST/libOpenCvNative.so");
 
